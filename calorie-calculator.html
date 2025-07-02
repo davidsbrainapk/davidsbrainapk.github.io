@@ -1,5 +1,5 @@
 <div style="max-width: 600px; margin: auto; background-color: #1e1e1e; color: #ffffff; padding: 2rem; border-radius: 1rem; font-family: sans-serif;">
-  <h2 style="text-align: center;">Daily Calorie & Macro Calculator</h2>
+  <h2 style="text-align: center;">🔥 Daily Calorie & Macro Calculator</h2>
   <form id="macroCalc">
     
     <label>Units:<br>
@@ -170,7 +170,7 @@
       <li><strong>Carbs:</strong> <span id="carbs"></span> g</li>
       <li><strong>Fats:</strong> <span id="fats"></span> g</li>
     </ul>
-    <p><strong>Per Meal (3 meals/day):</strong></p>
+    <p><strong>Per Meal (<span id="mealCount"></span> meals/day):</strong></p>
     <ul>
       <li><span id="mealCals"></span> Calories/meal</li>
       <li><span id="mealProtein"></span> g protein</li>
@@ -275,7 +275,9 @@
     document.getElementById('mealProtein').textContent = Math.round(protein / meals);
     document.getElementById('mealCarbs').textContent = Math.round(carbs / meals);
     document.getElementById('mealFats').textContent = Math.round(fats / meals);
+    document.getElementById('mealCount').textContent = meals;
 
     document.getElementById('results').style.display = 'block';
   });
 </script>
+
